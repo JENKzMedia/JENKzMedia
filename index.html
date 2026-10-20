@@ -629,8 +629,7 @@
     </div>
     <div class="contact-grid reveal">
       <div class="contact-intro">
-        <p>Got a project in mind, or just want to say hello? Get in touch directly or drop a message below.</p>
-        <a class="contact-email" href="mailto:Tristan.jenkins@jenkzmedia.co.uk">Tristan.jenkins@jenkzmedia.co.uk</a>
+        <p>Got a project in mind, or just want to say hello? Drop me a message using the form.</p>
       </div>
       <form id="contactForm" novalidate>
         <!-- Honeypot: hidden from real visitors, only a bot fills this in -->
@@ -758,7 +757,7 @@
     }).catch((err) => {
       console.error('EmailJS error:', err);
       const reason = (err && (err.text || err.message)) ? ' (' + (err.text || err.message) + ')' : '';
-      setStatus('Something went wrong sending that' + reason + '. Please email me directly instead.', 'error');
+      setStatus('Something went wrong sending that' + reason + '. Please try again in a moment.', 'error');
       if (window.grecaptcha) grecaptcha.reset();
       submitBtn.disabled = false;
     });
